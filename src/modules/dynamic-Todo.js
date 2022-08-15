@@ -1,6 +1,5 @@
 import DraggableTodo from './draggable-Todo';
 
-const draggableTodo = new DraggableTodo();
 export default class DynamicTodo {
   resetTodoDisplay = () => {
     const todoDisplay = document.querySelector('.todos-display');
@@ -16,8 +15,8 @@ export default class DynamicTodo {
 
       const todoContainer = document.createElement('div');
       todoContainer.setAttribute('draggable', true);
-      todoContainer.ondragstart = (e) => draggableTodo.dragStartTodo(e);
-      todoContainer.ondragend = (e) => draggableTodo.dragEndTodo(e, todoInstance);
+      todoContainer.ondragstart = (e) => DraggableTodo.dragStartTodo(e);
+      todoContainer.ondragend = (e) => DraggableTodo.dragEndTodo(e, todoInstance);
       todoContainer.id = id;
       todoContainer.classList = 'todos-container cursor-move draggable flex justify-between border border-x-0 px-4 py-6 space-x-3';
 
