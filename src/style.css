@@ -1,0 +1,59 @@
+@import './tailwind.css';
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap';
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: Poppins, sans-serif;
+  transition-duration: 0.25s;
+}
+
+body {
+  background-color: #f1f5dc;
+}
+
+.del-btn svg,
+.edit-btn svg {
+  transition: 150ms;
+}
+
+.del-btn:hover svg,
+.edit-btn:hover svg {
+  stroke: #fff;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+}
+
+/* Scrollbar section */
+::-webkit-scrollbar {
+  width: 0.5625rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e5e5;
+  border-radius: 0.3125rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background:
+    linear-gradient(
+      45deg,
+      rgba(241, 245, 220, 0.7),
+      rgba(234, 84, 85, 0.7) 100%
+    );
+  border-radius: 0.3125rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(120 113 108);
+}
