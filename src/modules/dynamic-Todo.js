@@ -18,7 +18,7 @@ export default class DynamicTodo {
       todoContainer.ondragstart = (e) => DraggableTodo.dragStartTodo(e);
       todoContainer.ondragend = (e) => DraggableTodo.dragEndTodo(e, todoInstance);
       todoContainer.id = id;
-      todoContainer.classList = 'todos-container cursor-move draggable flex justify-between border border-x-0 px-4 py-6 space-x-3';
+      todoContainer.classList = 'todos-container cursor-move draggable flex justify-between border border-x-0 px-4 py-4 space-x-3';
 
       if (todo.isEditing) {
         const newTextbox = document.createElement('input');
