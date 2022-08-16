@@ -28,15 +28,15 @@
     <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/cocogoose" />
   </head>
   <body>
-    <main class="flex justify-center w-screen ms:flex-col">
+    <main class="flex justify-center w-screen ms:flex-col items-center">
       <section
-      class="todo-section flex flex-col md:self-center bg-white md:min-w-[600px] sm:mx-2 md:w-6/12"
+      class="todo-section flex flex-col bg-white md:min-w-[600px] sm:mx-2 md:w-6/12 w-11/12"
       >
       <div class="flex justify-center bg-regal-beige">
-        <img class="w-[400px]" src="assets/microtasks-logo.png" alt="microtasks-logo" />
+        <img class="w-[400px] h-[100px] object-cover my-6" src="assets/microtasks-logo.png" alt="microtasks-logo" />
       </div>
         <div class="title flex justify-between w-full px-2 py-3">
-          <h3>Today's Todos</h3>
+          <h3 class="font-bold text-gray-500 decoration-red-500 underline">Today's Todos</h3>
           <button type="button">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@
           </button>
         </div>
         <div
-          class="todos-display flex flex-col w-full overflow-y-scroll max-h-56"
+          class="todos-display flex flex-col w-full overflow-y-scroll max-h-64"
         ></div>
         <button
           type="button"
