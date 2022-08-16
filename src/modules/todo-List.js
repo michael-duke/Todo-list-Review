@@ -63,7 +63,7 @@ class TodoList {
 
   clearAllCompleteTodos() {
     this.todoList = this.todoList.filter(
-      ({ isComplete }) => isComplete === false,
+      ({ isComplete }) => isComplete === false
     );
     this.reindexTodos();
     this.saveTodos();
@@ -95,9 +95,11 @@ class TodoList {
     const todoDesc = document.getElementById('todo-desc');
     const { value: description } = todoDesc;
 
-    const newTodo = new CreateTodo(id, description);
-    this.addTodo(newTodo);
-    todoDesc.value = '';
+    if (description.trim().length > 0) {
+      const newTodo = new CreateTodo(id, description);
+      this.addTodo(newTodo);
+      todoDesc.value = '';
+    }
   }
 
   reindexTodos() {
