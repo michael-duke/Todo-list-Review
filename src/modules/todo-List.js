@@ -63,7 +63,7 @@ class TodoList {
 
   clearAllCompleteTodos() {
     this.todoList = this.todoList.filter(
-      ({ isComplete }) => isComplete === false
+      ({ isComplete }) => isComplete === false,
     );
     this.reindexTodos();
     this.saveTodos();
